@@ -18,8 +18,17 @@
   "homepage": "https://github.com/sairoutine/emscriptoon#readme",
   "dependencies": {
     "textlint": "8.2.1",
+    "textlint-rule-ja-no-abusage": "1.2.1",
+    "textlint-rule-ja-no-mixed-period": "2.0.0",
+    "textlint-rule-ja-no-redundant-expression": "1.0.3",
     "textlint-rule-max-ten": "2.0.3",
     "textlint-rule-no-mix-dearu-desumasu": "3.0.3",
-    "textlint-rule-spellcheck-tech-word": "5.0.0"
+    "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "1.0.1",
+    "textlint-rule-spellcheck-tech-word": "5.0.0",
+    "textlint-rule-web-plus-db": "1.1.5"
+  },
+  "devDependencies": {
+    "textlint": "8.2.1",
+    "textlint-rule-incremental-headers": "0.2.0"
   }
 }

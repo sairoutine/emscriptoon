@@ -4,6 +4,12 @@
       "max": 3
     },
     "spellcheck-tech-word": true,
-    "no-mix-dearu-desumasu": true
+    "no-mix-dearu-desumasu": true,
+    "textlint-rule-web-plus-db": true,
+    "ja-no-redundant-expression": true,
+    "ja-no-abusage": true,
+    "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "ja-no-mixed-period": true,
+    "incremental-headers": true
   }
 }
