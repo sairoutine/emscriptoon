@@ -1,0 +1,25 @@
+{
+  "name": "emscriptoon",
+  "version": "1.0.0",
+  "description": "# emscriptoon",
+  "main": "index.js",
+  "scripts": {
+    "test": "textlint ./*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sairoutine/emscriptoon.git"
+  },
+  "author": "sairoutine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sairoutine/emscriptoon/issues"
+  },
+  "homepage": "https://github.com/sairoutine/emscriptoon#readme",
+  "dependencies": {
+    "textlint": "8.2.1",
+    "textlint-rule-max-ten": "2.0.3",
+    "textlint-rule-no-mix-dearu-desumasu": "3.0.3",
+    "textlint-rule-spellcheck-tech-word": "5.0.0"
+  }
+}
