@@ -2,6 +2,9 @@
 
 * [はじめに](README.md)
 * [Emscripten とは](About.md)
+* [Emscripten を使ったプロジェクト](Example.md)
+	TODO: 調査
+* [asm.js とは](asmjs.md)
 * [Get Started](GetStarted.md)
 	* [Download and install](GetStarted.md#)
 	* [Emscripten Tutorial](GetStarted.md#)
@@ -11,8 +14,6 @@
 	* [Connecting C++ and JavaScript](Details.md#)
 	* [Files and File Systems](Details.md#)
 	* [Multimedia and Graphics](Details.md#)
-* [Emscripten を使ったプロジェクト](Example.md)
-	TODO: 調査
 * [em-dosbox](em-dosbox.md)
 	TODO: ブログに従って書く
 * [xnp21](xnp21.md)
