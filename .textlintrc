@@ -10,6 +10,9 @@
     "ja-no-abusage": true,
     "no-mixed-zenkaku-and-hankaku-alphabet": true,
     "ja-no-mixed-period": true,
-    "incremental-headers": true
+    "incremental-headers": true,
+    "prh": {
+        "rulePaths" :["./test/prh.yml"]
+    }
   }
 }
