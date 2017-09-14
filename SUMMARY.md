@@ -6,8 +6,8 @@
 	TODO: 調査
 * [asm.js とは](asmjs.md)
 * [Get Started](GetStarted.md)
-	* [Download and install](GetStarted.md#)
-	* [Emscripten Tutorial](GetStarted.md#)
+	* [ダウンロードとインストール](GetStarted.md#ダウンロードとインストール)
+	* [Emscriptenでコンパイルしてみる](GetStarted.md#Emscriptenでコンパイルしてみる)
 * [詳細](Details.md)
 	* [Code Portability and Limitations](Details.md#)
 	* [Emscripten Runtime Environment](Details.md#)
