@@ -9,7 +9,7 @@
 	* [ダウンロードとインストール](GetStarted.md#ダウンロードとインストール)
 	* [Emscriptenでコンパイルしてみる](GetStarted.md#Emscriptenでコンパイルしてみる)
 * [詳細](Details.md)
-	* [Code Portability and Limitations](Details.md#)
+	* [C/C++コードの移植に当たっての気をつけポイント](Details.md#C/C++コードの移植に当たっての気をつけポイント)
 	* [Emscripten Runtime Environment](Details.md#)
 	* [Connecting C++ and JavaScript](Details.md#)
 	* [Files and File Systems](Details.md#)
