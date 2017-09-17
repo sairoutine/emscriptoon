@@ -67,9 +67,4 @@ Emscpriten は `libc` によるファイルシステム関数をサポートし�
  あたかもブラウザが応答を返さないように見えてしまいます。
  この解決方法は、Emscripten ランタイム環境の項目で解説します。
 
-## Function Pointer Issues
-http://localhost:2000/docs/porting/guidelines/function_pointer_issues.html
-
-## Specific Browser Limitations
-http://localhost:2000/docs/porting/guidelines/browser_limitations.html
 
