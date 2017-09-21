@@ -45,6 +45,9 @@ https://bellard.org/jslinux/
 URL:
 https://github.com/kripken/sql.js
 
+# 鬼畜王 on Web
+
+
 ## Unity
 AngryBots
 https://files.unity3d.com/jonas/AngryBots/
