@@ -10,7 +10,7 @@
 	* [Emscriptenでコンパイルしてみる](GetStarted.md#Emscriptenでコンパイルしてみる)
 * [C/C++コードの移植に当たっての気をつけポイント](Notice.md#C/C++コードの移植に当たっての気をつけポイント)
 * [Emscripten実行環境について](Runtime.md#)
-* [Connecting C++ and JavaScript](Details.md#)
+* [C/C++とJavaScript間でのコード呼び出し](Interact.md#)
 * [Files and File Systems](Details.md#)
 * [Multimedia and Graphics](Details.md#)
 * [em-dosbox](em-dosbox.md)
