@@ -10,7 +10,6 @@
 * [Emscripten実行環境について](Runtime.md#)
 * [C/C++とJavaScript間でのコード呼び出し](Interact.md#)
 * [Files and File Systems](FileSystem.md#)
-* [Multimedia and Graphics](Graphics.md#)
 * [em-dosbox](em-dosbox.md)
 	TODO: ブログに従って書く
 * [あとがき](Thanks.md)
