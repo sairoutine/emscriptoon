@@ -9,7 +9,7 @@
 * [C/C++コードの移植に当たっての気をつけポイント](Notice.md#C/C++コードの移植に当たっての気をつけポイント)
 * [Emscripten実行環境について](Runtime.md#)
 * [C/C++とJavaScript間でのコード呼び出し](Interact.md#)
-* [Files and File Systems](FileSystem.md#)
+* [ファイルシステムについて](FileSystem.md#)
 * [em-dosbox](em-dosbox.md)
 	TODO: ブログに従って書く
 * [あとがき](Thanks.md)
