@@ -1,9 +1,6 @@
-# em-dosbox で遊んで見る
+# em-dosbox で遊んでみる
 
-
-## em-dosbox とは
-
-em-dosbox とは DOSBox の Emscripten 移植です。DOSBox は、 MS-DOS 環境のエミュレータです。
+em-dosbox とは DOSBox の `Emscripten` 移植です。DOSBox は、 MS-DOS 環境のエミュレータです。
 em-dosbox を使うことにより、MS-DOS 向けのゲームをWeb ブラウザ上に移植できます。
 
 Internet Archive が、2015年ごろに、2400タイトルものMS-DOSのゲームを Web 上で公開しました。
@@ -46,7 +43,7 @@ http://abaduaber.ru/Prog.htm
 
 コンパイル手順は基本的に em-dosbox リポジトリの Readme に書いてある通りです。
 
-なお、emsdk を利用しています。
+なお、`emsdk` を利用しています。
 
 ```
 # emsdk のセット
@@ -105,3 +102,9 @@ packager の第一引数にはパッケージ後のファイル名を、第二�
 ```
 ./packager.py badapple BADAPPLE.EXE
 ```
+
+## 終わりに
+以上で、`Emscripten` についておおまかな概要を解説し、コンパイルの方法から、em-dosbox を利用した多少有意義な利用の仕方まで解説しました。本書では、概要レベルのことだけ解説しました。より詳細な情報は、公式のドキュメントが一番くわしいです。もしご興味を持たれましたら、ぜひ一読してみてください。
+
+公式ドキュメント：https://kripken.github.io/emscripten-site/
+

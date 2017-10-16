@@ -8,6 +8,6 @@
 * [Emscripten実行環境について](Runtime.md#)
 * [C/C++とJavaScript間でのコード呼び出し](Interact.md#)
 * [ファイルシステムについて](FileSystem.md#)
-* [em-dosbox で遊んで見る](em-dosbox.md)
+* [em-dosbox で遊んでみる](em-dosbox.md)
 * [あとがき](Thanks.md)
 

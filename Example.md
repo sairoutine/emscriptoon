@@ -1,7 +1,7 @@
 # Emscripten を使ったプロジェクト
 
-Emscripten を使うと、どのようなことができるでしょうか。
-本稿では、Emscripten を利用した既存のプロジェクトについてご紹介します。
+`Emscripten` を使うと、どのようなことができるでしょうか。
+本章では、`Emscripten` を利用した既存のプロジェクトについてご紹介します。
 
 ## Ammo.js
 URL:
@@ -19,7 +19,7 @@ ammo.js と WebGL を利用することで、重力と地面の存在する 3D �
 URL:
 https://github.com/antimatter15/ocrad.js
 
-ocrad.js は GNU製のOCRであるOcradをEmscriptenを使ってJavaScriptに移植したプロジェクトです。
+ocrad.js は GNU製のOCRであるOcradを`Emscripten`を使ってJavaScriptに移植したプロジェクトです。
 画像に書かれた文字を、テキストとして取得できます。
 
 * サンプルコード
@@ -34,7 +34,7 @@ alert(string);
 URL:
 https://github.com/dreamlayers/em-dosbox
 
-em-dosbox とは DOSBox の Emscripten 移植です。DOSBox は、 MS-DOS 環境のエミュレータです。
+em-dosbox とは DOSBox の `Emscripten` 移植です。DOSBox は、 MS-DOS 環境のエミュレータです。
 em-dosbox を使うことにより、MS-DOS 向けのゲームをWeb ブラウザ上に移植できます。
 詳細は本書の「em-dosbox で遊んで見る」の項目でまた解説します。
 
@@ -42,7 +42,7 @@ em-dosbox を使うことにより、MS-DOS 向けのゲームをWeb ブラウ�
 URL:
 https://github.com/coolwanglu/vim.js
 
-vim.js は、Vim の Emscripten 移植です。ブラウザ上から Vim を利用できます。
+vim.js は、Vim の `Emscripten` 移植です。ブラウザ上から Vim を利用できます。
 
 
 ## JSLinux
@@ -56,11 +56,11 @@ Fabrice Bellard が作りました。
 URL:
 https://kichikuou.github.io/web/
 
-「鬼畜王 on Web」は、アリスソフトの 配布フリー宣言 に基づいて配布されている「鬼畜王ランス」等のゲームをブラウザ上で遊べるようにしたものです。アリスソフトのゲームエンジン System3 / System3.5（の、有志によるオープンソース版）を Emscripten に移植して利用しています。
+「鬼畜王 on Web」は、アリスソフトの 配布フリー宣言 に基づいて配布されている「鬼畜王ランス」等のゲームをブラウザ上で遊べるようにしたものです。アリスソフトのゲームエンジン System3 / System3.5（の、有志によるオープンソース版）を `Emscripten` に移植して利用しています。
 
 ## Unity
 
-Unity の WebGL 出力では、Emscripten を利用して Unity エンジン
+Unity の WebGL 出力では、`Emscripten` を利用して Unity エンジン
 そのものを JavaScript として出力しています。
 以下は、Unity の WebGL 出力で制作されたゲームのサンプルです。
 

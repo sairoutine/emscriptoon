@@ -1,19 +1,19 @@
 # Get Started
 
-それでは、Emscripten を実際に触ってみましょう。
+それでは、`Emscripten` を実際に触ってみましょう。
 
 ## ダウンロードとインストール
 
 ### Emscripten SDK
 
-Emscripten を使うには、portable SDK を利用するのが便利です。
-SDK には、Emscripten のコンパイルに必要な一通りのツールや依存しているライブラリが含まれているます。
+`Emscripten` を使うには、portable SDK を利用するのが便利です。
+SDK には、`Emscripten` のコンパイルに必要な一通りのツールや依存しているライブラリが含まれているます。
 
 SDK は以下のページからダウンロードできます。
 
 https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html#sdk-downloads
 
-SDK をダウンロードしたら、SDK のディレクトリに移動し、Emscripten ツールをダウンロードします。
+SDK をダウンロードしたら、SDK のディレクトリに移動し、`Emscripten` ツールをダウンロードします。
 
 ```
 # 最新の Emscripten ツール情報を取得して更新
@@ -37,10 +37,10 @@ Linux and Mac OS X では、以下のコマンドも実行します。
 source ./emsdk_env.sh
 ```
 
-## Emscriptenでコンパイルしてみる
+## `Emscripten` でコンパイルしてみる
 
-Emscripten でコンパイルを行うには、`emcc` コマンドを使います。
-まず、Emscripten のダウンロードとインストールが正常に行われているか確認します。
+`Emscripten` でコンパイルを行うには、`emcc` コマンドを使います。
+まず、`Emscripten` のダウンロードとインストールが正常に行われているか確認します。
 
 ```
 ./emcc -v
@@ -49,7 +49,7 @@ Emscripten でコンパイルを行うには、`emcc` コマンドを使いま�
 それでは、いよいよC/C++ のコードを JavaScript に変換してみましょう。
 以下のC/C++ コードを用意します。
 
-hello_world.c
+`hello_world.c`
 ```
 #include <stdio.h>
 
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-見ての通り、hello, world! を出力するだけのコードです。これを Emscripten でコンパイルします。
+見ての通り、hello, world! を出力するだけのコードです。これを `Emscripten` でコンパイルします。
 
 ```
 ./emcc tests/hello_world.c
@@ -72,21 +72,21 @@ int main() {
 node a.out.js # hello, world!
 ```
 
-ブラウザで実行したい場合は、-o オプションを利用します。-o は、出力ファイル名を指定するオプションです。
+ブラウザで実行したい場合は、`-o` オプションを利用します。`-o` は、出力ファイル名を指定するオプションです。
 `.html` 拡張子のファイルを指定すると、Emscrpten は HTML 形式でコンパイルします。
 
 ```
 ./emcc tests/hello_world.c -o hello.html
 ```
 
-生成された hello.html を開くことで、hello world が出力されます。
+生成された `hello.html` を開くことで、hello world が出力されます。
 
 HTML 出力は、テキストの表示にとどまりません。
 SDL API を利用したコードを使えば、HTML5 の canvas 要素で出力されます。
 
 以下のコードは、SDL API を利用した C/C++ コードです。
 
-hello_world_sdl.cpp
+`hello_world_sdl.cpp`
 ```
 #include <stdio.h>
 #include <SDL/SDL.h>
@@ -137,16 +137,16 @@ extern "C" int main(int argc, char** argv) {
 
 コンパイルすることで、HTML5 canvas 形式で、画面が表示されたことかと思います。
 
-C/C++ コードでは、ローカルのファイルを読み込んだり、書き込んだりすることがあります。
-しかし JavaScript では、ローカルのファイルの読み書きは(ユーザーの許可がない限り)できません。
+C/C++ コードでは、PC上のローカルのファイルを読み込んだり、書き込んだりすることがあります。
+しかし ブラウザ上で動く JavaScript では、ローカルのファイルの読み書きはできません。
 
-このため Emscripten は独自の仮想ファイルシステムをシミュレートし、
+このため `Emscripten` は独自の仮想ファイルシステムをシミュレートし、
 仮想ファイルシステム内で、C/C++ コード内に記述されていたファイルの読み書きを JavaScript で行います。
 
 以下のコードは、C/C++ 内でファイルの読み書きを行っているコードです。
 
 
-The hello_world_file.cpp
+`The hello_world_file.cpp`
 ```
 #include <stdio.h>
 int main() {
@@ -166,7 +166,7 @@ int main() {
 }
 ```
 
-tests/hello_world_file.txt
+`tests/hello_world_file.txt`
 ```
 ==
 This data has been read from a file.
@@ -176,16 +176,16 @@ The file is readable as if it were at the same location in the filesystem, inclu
 
 hello_world_file.txt を読み込み、それを標準出力するコードです。
 
-Emscripten でコンパイルする際に、--preload-file オプションで、仮想ファイルシステムに組み込むファイルを指定します。
-これにより C/C++から変換された JavaScript 内で、tests/hello_world_file.txt に、ファイル書き込みや読み込みを行うことができます。
+`Emscripten` でコンパイルする際に、`--preload-file` オプションで、仮想ファイルシステムに組み込むファイルを指定します。
+これにより C/C++から変換された JavaScript 内で、`tests/hello_world_file.txt` に、ファイル書き込みや読み込みを行うことができます。
 
 ```
 ./emcc tests/hello_world_file.cpp -o hello.html --preload-file tests/hello_world_file.txt
 ```
 
-Note
+**Note**
 
-Emscripten によって変換された JavaScriptコードから --preload-file で指定されたファイルにアクセスする際は、
+`Emscripten` によって変換された JavaScriptコードから `--preload-file` で指定されたファイルにアクセスする際は、
 XHR を利用してアクセスされます。よって Chrome や Internet Explorer から、直接ローカルの HTML を開くと XHR でアクセスできません。
 
 その場合は、`python -m SimpleHTTPServer 8080` のように ローカルに HTTP サーバーを立てて、
