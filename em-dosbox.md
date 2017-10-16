@@ -1,29 +1,37 @@
-# はじめに
-
-[f:id:sairoutine:20170731020004p:plain]
-
-Emscriptenとは C/C++言語からLLVMを生成し、それをJavaScriptに変換するコンパイラのことです。  
-DOSBoxは、PC/AT互換機のMS-DOS環境を再現するエミュレータです。  
-
-# 結果
-
-[https://twitter.com/sairoutine/status/891677841976303617:embed]
-
-上記ツイート内動画のように、DOS向け Bad Apple!! をブラウザで再生することができました。  
+# em-dosbox
 
 
-# 再生
-皆様のブラウザでも、以下のURLから再生することができます。  
-  
+## em-dosbox とは
+
+em-dosbox とは DOSBox の emscripten 移植です。DOSBox は、 MS-DOS 環境のエミュレータです。
+em-dosbox を使うことにより、MS-DOS 向けのゲームをWeb ブラウザ上に移植したりすることができます。
+
+Internet Archive が、2015年ごろに、2400タイトルものMS-DOSのゲームを Web 上で公開しましたが、
+それらMS-DOSゲームのエミュレータとして、em-dosbox が利用されています。
+
+参考URL: https://archive.org/details/softwarelibrary_msdos_games/v2
+
+## Bad Apple!! をブラウザ上で再生してみる。
+
+それでは、em-dosbox を使って、MS-DOS用のソフトウェアをWebブラウザ上で動かしてみましょう。
+ニコニコ動画で有名な動画「Bad Apple!!」は、様々な環境に移植されており、DOS向けの移植が存在します。
+今回は、このDOS向けの「Bad Apple!!」をWebブラウザ上で再生してみることにします。
+
+## 結果
+
+![](./em-dosbox.png)
+
+皆様のブラウザでも、以下のURLから再生することができます。
+
 https://sairoutine.github.io/BadAppleJS/
 
-起動すると「Choose sound device」と聞かれるので「3」を押して Enter してください。ロードに成功すると、「Press enter to start」と言われるので、Enter を押してください。再生が始まります。
+起動すると「Choose sound device」と聞かれるので「3」を押して Enter してください。
+ロードに成功すると、「Press enter to start」と言われるので、Enter を押してください。再生が始まります。
 
-※「Exception thrown, see JavaScript console」と表示されたらリロードしてみてください  
-※音ズレが発生しているのは勘弁  
+※「Exception thrown, see JavaScript console」と表示されたらリロードしてみてください
 
 # 過程
-em-dosbox という DOSBox の emscripten 移植が存在するので、それを利用しています。
+em-dosbox のコードは以下のレポジトリに存在します。
 
 https://github.com/dreamlayers/em-dosbox
 
@@ -36,7 +44,7 @@ http://abaduaber.ru/Prog.htm
 事前にダウンロードして解凍し、のちのち git clone してくる `./em-dosbox/src` 配下に移動させておきます。
 
 
-コンパイル手順は基本的に em-dosbox レポジトリの Readme に書いてある通りです。環境は、MacOS X EI Captain 10.11.6 です。
+コンパイル手順は基本的に em-dosbox レポジトリの Readme に書いてある通りです。
 
 なお、emsdk を利用しています。
 
@@ -46,7 +54,7 @@ git clone git@github.com:juj/emsdk.git
 cd emsdk-portable
 ./emsdk install latest
 ./emsdk activate latest
-source ./emsdk_env.sh 
+source ./emsdk_env.sh
 
 # em-dosbox のダウンロード
 cd ../
@@ -81,12 +89,9 @@ open http://localhost:8000/badapple.html
 emconfigure ./configure --without-sdl2
 ```
 
-em-dosbox はデフォルトで、SDL2 を利用してコンパイルするが、
-私のMac には SDL1 しか入ってなかったので、オプション指定して SDL1 を利用しています。
-
-SDL2 が入っていないと、以下のようなエラーになる。
-
-[f:id:sairoutine:20170731020014p:plain]
+em-dosbox はデフォルトで、SDL2 を利用してコンパイルしますが、
+SDL1 しか入ってない環境の場合、オプション指定して SDL1 を利用できます
+(上記の手順でもSDL1を利用しています)
 
 
 ```
@@ -100,9 +105,3 @@ packager の第一引数にはパッケージ後のファイル名を、第二�
 ```
 ./packager.py badapple BADAPPLE.EXE
 ```
-
-# 終わり
-描画が追いついておらず、音ズレが発生しているのは、WebAssembly を有効にすれば
-解決するかもしれない。次回やってみる。
-
-Bad Apple !!だけでなく、DOSBox では例えば Win3.1 や Windows 98 も起動できるみたいなので、うまくやれば、ブラウザ上でそれらも動かせるかもしれない。
