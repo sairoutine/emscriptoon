@@ -1,5 +1,8 @@
 {
     "styles": {
         "pdf": "pdf.css"
-    }
+    },
+	"pdf": {
+		"paperSize": "b5"
+	}
 }
