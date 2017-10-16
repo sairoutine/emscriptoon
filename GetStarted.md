@@ -11,15 +11,7 @@ SDK には、Emscripten のコンパイルに必要な一通りのツールや�
 
 SDK は以下のページからダウンロードできます。
 
-```
-TODO: URL
-```
-
-また、Mac であれば homebrew を利用してダウンロードすることもできます。
-
-```
-TODO: 手順
-```
+https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html#sdk-downloads
 
 SDK をダウンロードしたら、SDK のディレクトリに移動し、Emscripten ツールをダウンロードします。
 
@@ -89,10 +81,6 @@ node a.out.js # hello, world!
 
 生成された hello.html を開くことで、hello world が出力されます。
 
-```
-TODO: ここに出力されたファイルの画像
-```
-
 HTML 出力は、テキストの表示にとどまりません。
 SDL API を利用したコードを使えば、HTML5 の canvas 要素で出力されます。
 
@@ -148,11 +136,6 @@ extern "C" int main(int argc, char** argv) {
 ```
 
 コンパイルすることで、HTML5 canvas 形式で、画面が表示されたことかと思います。
-
-```
-TODO: ここに出力されたファイルの画像
-```
-
 
 C/C++ コードでは、ローカルのファイルを読み込んだり、書き込んだりすることがあります。
 しかし JavaScript では、ローカルのファイルの読み書きは(ユーザーの許可がない限り)できません。

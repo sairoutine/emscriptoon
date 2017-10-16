@@ -28,11 +28,6 @@ int int_sqrt(int x) {
 ./emcc tests/hello_function.cpp -o function.html -s EXPORTED_FUNCTIONS="['_int_sqrt']"
 ```
 
-```
-TODO: `EXPORTED_FUNCTIONS` とは？
-`_` がついていることに注意。
-```
-
 cwrap() を使うことで JavaScript の関数として利用できます。
 
 ```
