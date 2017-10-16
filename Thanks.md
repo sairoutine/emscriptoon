@@ -13,7 +13,7 @@
 ## Special Thanks
 表紙のイラストは、ラパメリ様にお願いしました。
 この場を借りてお礼申し上げます。
-
+<div style="page-break-before:always"></div>
 ## 奥付
 ・本のタイトル  
 Emscriptoon  

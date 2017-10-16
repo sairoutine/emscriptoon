@@ -15,7 +15,7 @@ JavaScript コードに埋め込む方法は、パフォーマンスが良くな
 ```
 ./emcc file.cpp -o file.html --preload-file asset_dir
 ```
-このコマンドを実行すると、`file.html` `file.js` `file.data` が生成されます。`file.data` が、`asset_dir` 内のファイルのデータです。この `file.data` が file.js 経由で読み込まれて、ファイルシステムとしてマウントされます。
+このコマンドを実行すると、`file.html` `file.js` `file.data` が生成されます。`file.data` が、`asset_dir` 内のファイルのデータです。この `file.data` が `file.js` 経由で読み込まれて、ファイルシステムとしてマウントされます。
 
 `emcc` のオプションに `--embed-file dir_name` を指定することで、embedding で組み込むファイルを指定できます。
 

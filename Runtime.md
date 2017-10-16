@@ -66,14 +66,10 @@ void one_iter() {
 `addRunDependency()` 関数を実行しておくことで、このフェーズにさらに何かを実行することも可能です。
 
 アプリケーションの実行に必要な全ての依存関係が解決できたら、`Emscripten` は`run()` 関数を呼びます。`run()`関数を通して、`main()`が呼ばれます。
-main() はアプリケーションの実行に必要な初期化を行い、その後 `emscripten_set_main_loop()` を呼ぶコードにすべきです。
+`main()` はアプリケーションの実行に必要な初期化を行い、その後 `emscripten_set_main_loop()` を呼ぶコードにすべきです。
 これによりアプリケーションのメインループが開始します。
 
-いくつかの方法で、メインループを制御できます。
-
-
-`emscripten_push_main_loop_blocker()` を実行しておくと、この関数が完了するまで、メインループが開始しません。 
-これは例えばゲームを作る際に、新しいレベルをロードするなど、読み込みのタスクを`emscripten_push_main_loop_blocker()`にて行い、その間、メインループを止めるのに役立ちます。
+いくつかの方法で、メインループを制御できます。 `emscripten_push_main_loop_blocker()` を実行しておくと、この関数が完了するまで、メインループが開始しません。これは例えばゲームを作る際に、新しいレベルをロードするなど、読み込みのタスクを`emscripten_push_main_loop_blocker()`にて行い、その間、メインループを止めるのに役立ちます。
 
 `emscripten_pause_main_loop()` が呼ばれると、メインループの実行が中断されます。
 `emscripten_resume_main_loop()`を呼ぶことで再開できます。
